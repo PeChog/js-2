@@ -1,5 +1,4 @@
-const tag = document.createElement("p");
-tag.innerHtml = "hello world";
+const tag = (document.createElement("p").innerHTML = "hello world");
 const create = document.getElementById("content").appendChild(tag);
 console.log(create);
 console.log(create.parentNode);

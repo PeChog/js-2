@@ -4,5 +4,5 @@ document.querySelector(".btn.secondary").style.backgroundColor = "grey";
 document.querySelector(".btn.warning").style.backgroundColor = "yellow";
 document.querySelector(".btn.secondary.danger").style.backgroundColor = "red";
 document.querySelector(".btn.secondary.warning").style.backgroundColor =
-  "green";
-document.querySelector(".btn.danger.warning").style.backgroundColor = "yellow";
+  "yellow";
+document.querySelector(".btn.danger.warning").style.backgroundColor = "red";
