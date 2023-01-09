@@ -8,6 +8,6 @@ const addP = () => {
 };
 
 const button = document.getElementById("clickme");
-let click = button.addEventListener("click", addP);
+button.addEventListener("click", addP);
 
 console.log(document.getElementsByTagName("p"));
