@@ -1,15 +1,18 @@
 const createTag = () => {
-  const element = document.getElementsByTagName("input");
-  const inputs = [...element];
-  const attribute = inputs.map((e) => e.name);
-  console.log(attribute);
+  const age = document.getElementsByName("age")[0].value;
+  console.log(age);
+  const firstName = document.getElementsByName("name")[0].value;
+  console.log(firstName);
+  const date = document.getElementsByName("birthdate")[0].value;
+  console.log(date);
+
   const tag = document.createElement("p");
-  tag.textContent = `${attribute}: ${value}`;
-  return document.getElementByTagName("body").appendChild(tag);
+  tag.textContent = `name: ${firstName}, age: ${age}, birthdate: ${date} `;
+  return document.getElementsByTagName("body")[0].appendChild(tag);
 };
 createTag();
 const button = document.getElementsByTagName("button")[0];
 
 button.addEventListener("click", createTag);
 
-console.log(button);
+console.log(document.getElementsByTagName("p"));
