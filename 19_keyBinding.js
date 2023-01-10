@@ -1,27 +1,22 @@
-// const square = document.getElementById("square");
+const square = document.querySelector("#square");
 
-// square.style.top = "0px";
-// square.style.left = "0px";
-
-// document.addEventListener("keydown", (event) => {
-//   console.log(event.key);
-//   if ((event.key = "ArrowUp")) {
-//     square.style.top = `${square.style.top + 10}px`;
-//   }
-
-//   if ((event.key = "ArrowRight")) {
-//     square.style.right = square.style.left + 10;
-//   }
-//   if ((event.key = "ArrowLeft")) {
-//     square.style.right = `${square.style.left - 10}px`;
-//   }
-//   if ((event.key = "ArrowRight")) {
-//     square.style.right = `${square.style.left - 10}px`;
-//   }
-
-//   let right = (event.key = "ArrowRight");
-//   let down = (event.key = "ArrowDown");
-//   let left = (event.key = "ArrowLeft");
-// });
+document.addEventListener("keydown", (event) => {
+  if (event.code === "ArrowUp") {
+    square.style.top = square.offsetTop - 10 + "px";
+    console.log("j'ai appuyé sur haut");
+  }
+  if (event.code === "ArrowRight") {
+    square.style.left = square.offsetLeft + 10 + "px";
+    console.log("j'ai appuyé sur droite");
+  }
+  if (event.code === "ArrowLeft") {
+    square.style.left = square.offsetLeft - 10 + "px";
+    console.log("j'ai appuyé sur gauche");
+  }
+  if (event.code === "ArrowDown") {
+    square.style.top = square.offsetTop + 10 + "px";
+    console.log("j'ai appuyé sur bas");
+  }
+});
 
 // console.log(square);
