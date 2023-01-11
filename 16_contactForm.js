@@ -8,6 +8,7 @@ const createTag = () => {
 
   const tag = document.createElement("p");
   tag.textContent = `name: ${firstName}, age: ${age}, birthdate: ${date} `;
+  tag.setAttribute("id", "result");
   return document.getElementsByTagName("body")[0].appendChild(tag);
 };
 createTag();
