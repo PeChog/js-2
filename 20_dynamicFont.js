@@ -1,10 +1,7 @@
-let value = document.getElementById("fontsize").value;
-console.log(value);
+let value = document.getElementById("fontsize");
+
 let toChange = document.getElementsByClassName("controlled_fontsize");
 toChange = [...toChange];
-console.log(toChange);
-
-const changeFontSize = () => {
-  return toChange.map((e) => (e.style.fontSize = `${value}px`));
-};
-changeFontSize();
+const changeFontSize = () =>
+  toChange.map((e) => (e.style.fontSize = `${value.value}px`));
+value.addEventListener("input", changeFontSize);
