@@ -14,7 +14,7 @@ addButton.addEventListener("click", (e) => {
   if (task !== "") {
     ul.appendChild(li);
   } else {
-    alert("Vous devez rentrer une tâche !!!!!!!!!!!!!!!!");
+    alert("Field is empty!");
   }
   document.querySelector("input").value = "";
   const deleteButton = document.querySelector(`#delete-${id}`);
