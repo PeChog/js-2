@@ -9,12 +9,15 @@ addButton.addEventListener("click", (e) => {
   let id = Math.floor(Math.random() * 100000);
   li.innerHTML = `
     <li>${task}</li>
-    <button id="suppr-${id}">Supprimer</button>
+    <button id="delete-${id}">Supprimer</button>
     `;
-  ul.appendChild(li);
+  if (task !== "") {
+    ul.appendChild(li);
+  } else {
+    alert("Vous devez rentrer une tâche !!!!!!!!!!!!!!!!");
+  }
   document.querySelector("input").value = "";
-
-  const deleteButton = document.querySelector(`#suppr-${id}`);
+  const deleteButton = document.querySelector(`#delete-${id}`);
   deleteButton.addEventListener("click", () => {
     li.remove();
   });
