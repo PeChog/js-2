@@ -1,4 +1,3 @@
-const form = document.getElementById("form");
 const ul = document.getElementsByTagName("ul")[0];
 const addButton = document.getElementById("addTodo");
 
