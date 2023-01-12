@@ -22,6 +22,7 @@ const createElementFail = () => {
   p.className = "fail";
   p.textContent = "fail";
   p.style.color = "red";
+  p.style.fontSize = "100px";
   document.body.appendChild(p);
 };
 
@@ -37,7 +38,6 @@ success.addEventListener("click", async () => {
 fail.addEventListener("click", async () => {
   try {
     await sleep(2000, false);
-    console.log("j'ai réussi");
   } catch (error) {
     createElementFail();
   }
