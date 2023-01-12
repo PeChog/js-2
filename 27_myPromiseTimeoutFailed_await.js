@@ -16,16 +16,23 @@ const createElement = () => {
   document.body.appendChild(p);
 };
 
-success.addEventListener(
-  "click",
-  async () => await sleep(2000, true).then(() => createElement())
-);
+success.addEventListener("click", async () => {
+  try {
+    await sleep(2000, true);
+    createElement();
+  } catch (error) {
+    console.log("error");
+  }
+});
 
-fail.addEventListener("click", () =>
-  sleep(2000, false).catch(() => {
+fail.addEventListener("click", async () => {
+  try {
+    await sleep(2000, false);
+    console.log("j'ai réussi");
+  } catch (error) {
     const p = document.createElement("p");
     p.className = "fail";
     p.textContent = "fail";
     document.body.appendChild(p);
-  })
-);
+  }
+});
