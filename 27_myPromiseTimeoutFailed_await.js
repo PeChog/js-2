@@ -9,17 +9,26 @@ const sleep = (milliseconds, boolean) => {
 const success = document.getElementById("success");
 const fail = document.getElementById("fail");
 
-const createElement = () => {
+const createElementSuccess = () => {
   const p = document.createElement("p");
   p.className = "success";
   p.textContent = "success";
+  p.style.color = "green";
+  document.body.appendChild(p);
+};
+
+const createElementFail = () => {
+  const p = document.createElement("p");
+  p.className = "fail";
+  p.textContent = "fail";
+  p.style.color = "red";
   document.body.appendChild(p);
 };
 
 success.addEventListener("click", async () => {
   try {
     await sleep(2000, true);
-    createElement();
+    createElementSuccess();
   } catch (error) {
     console.log("error");
   }
@@ -30,9 +39,6 @@ fail.addEventListener("click", async () => {
     await sleep(2000, false);
     console.log("j'ai réussi");
   } catch (error) {
-    const p = document.createElement("p");
-    p.className = "fail";
-    p.textContent = "fail";
-    document.body.appendChild(p);
+    createElementFail();
   }
 });
