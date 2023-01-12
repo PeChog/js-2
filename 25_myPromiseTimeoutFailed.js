@@ -6,4 +6,11 @@ const sleep = (milliseconds, boolean) => {
   );
 };
 
+document.getElementsByTagName("button")[0].addEventListener(
+  "click",
+  sleep(2000, false)
+    .then(() => console.log("ok"))
+    .catch(() => console.log("error"))
+);
+
 module.exports = sleep;
